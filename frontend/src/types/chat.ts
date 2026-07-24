@@ -10,7 +10,7 @@ export interface Group {
 }
 
 export interface LastMessage {
-  _id: string;
+  messageId: string;
   content: string;
   sender: {
     _id: string;

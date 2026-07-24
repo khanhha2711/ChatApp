@@ -50,7 +50,7 @@ const ChatBody = () => {
             participant={participant}
             index={index}
           />
-          {message.isOwn && message._id === convo.lastMessage?._id && (
+          {message.isOwn && message._id === convo.lastMessage?.messageId && (
             <p className="text-right text-sm ">{statusMessage}</p>
           )}
         </div>
