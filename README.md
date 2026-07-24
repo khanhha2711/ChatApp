@@ -77,7 +77,9 @@ A modern real-time chat application built with React, Node.js, Socket.IO and Mon
 # 📁 Project Structure
 
 - Backend
+  
   <img width="220" height="389" alt="image" src="https://github.com/user-attachments/assets/10a03b75-a986-4aa8-9752-527c3cc6336b" />
 - Frontend
+  
   <img width="207" height="493" alt="image" src="https://github.com/user-attachments/assets/e2996510-a9f6-48e1-817f-8d6e814db013" />
 
