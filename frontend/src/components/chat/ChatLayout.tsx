@@ -1,11 +1,10 @@
 import { SidebarInset, SidebarTrigger } from "../ui/sidebar";
-import { Separator } from "../ui/separator";
 import UserAvatar from "./UserAvatar";
 import ChatBody from "./ChatBody";
 import InputChat from "./InputChat";
 import WelcomeChat from "./WelcomeChat";
 import { useChatStore } from "@/stores/useChatStore";
-import ChatSkeleton from "../skeleton/chatSkeleton";
+import ChatSkeleton from "../skeleton/ChatSkeleton";
 
 const ChatLayout = () => {
   const { activeConversation, conversations, isLoading } = useChatStore();

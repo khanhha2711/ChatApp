@@ -1,11 +1,9 @@
-import { useAuthStore } from "@/stores/useAuthStore";
 import { useChatStore } from "@/stores/useChatStore";
 import type { Conversation } from "@/types/chat";
 import ChatCard from "./ChatCard";
 import { useSocketStore } from "@/stores/useSocketStore";
 
 const GroupChatCard = ({ conversation }: { conversation: Conversation }) => {
-  const { user } = useAuthStore();
   const {
     activeConversation,
     conversations,
@@ -19,9 +17,7 @@ const GroupChatCard = ({ conversation }: { conversation: Conversation }) => {
     conversations.find((convo) => convo._id === activeConversation)
       ?.participants || [];
 
-  const unreadCount = conversation.participants.find(
-    (p) => p._id === user?._id,
-  );
+  const unreadCount = conversation.unreadCount || 0;
 
   const online = participants.some((participant) =>
     onlineUsers.includes(participant._id),

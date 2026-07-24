@@ -1,4 +1,4 @@
-import { SquarePen, UserPlus } from "lucide-react";
+import { SquarePen } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -44,12 +44,14 @@ const CreateNewChat = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <div className="flex items-center gap-2 cursor-pointer">
-          <SquarePen />
-          <p>Tạo đoạn chat mới</p>
-        </div>
-      </DialogTrigger>
+      <DialogTrigger
+        render={
+          <div className="flex items-center gap-2 cursor-pointer">
+            <SquarePen />
+            <p>Tạo đoạn chat mới</p>
+          </div>
+        }
+      ></DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Đoạn chat mới</DialogTitle>

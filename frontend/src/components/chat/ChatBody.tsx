@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { useChatStore } from "@/stores/useChatStore";
 import { useAuthStore } from "@/stores/useAuthStore";
 import MessageItem from "./MessageItem";
+import { useEffect, useRef } from "react";
 
 const ChatBody = () => {
   const {
@@ -20,9 +21,19 @@ const ChatBody = () => {
 
   if (!convo) return;
   const statusMessage =
-    convo.lastMessage?.seenBy?.length > 0 ? "Đã xem" : "Đã gửi";
-    
+    (convo.lastMessage?.seenBy?.length ?? 0) > 0 ? "Đã xem" : "Đã gửi";
+
   const participant = convo.participants.filter((p) => p._id !== myId);
+
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+  }, [activeConversation, messages.length]);
+
   return (
     <div className="flex-1 overflow-y-scroll ">
       {messages.map((message, index) => (
@@ -39,11 +50,12 @@ const ChatBody = () => {
             participant={participant}
             index={index}
           />
-          {message.isOwn && message._id === convo.lastMessage.messageId && (
+          {message.isOwn && message._id === convo.lastMessage?._id && (
             <p className="text-right text-sm ">{statusMessage}</p>
           )}
         </div>
       ))}
+      <div ref={bottomRef}></div>
     </div>
   );
 };

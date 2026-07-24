@@ -1,6 +1,6 @@
 import React from "react";
 import { Label } from "../ui/label";
-import { Plus, UserPlus } from "lucide-react";
+import { UserPlus } from "lucide-react";
 import { Button } from "../ui/button";
 import { DialogClose, DialogFooter } from "../ui/dialog";
 import { Textarea } from "../ui/textarea";
@@ -37,11 +37,13 @@ const SendFriendRequest = ({
         />
         <DialogFooter>
           <div className="flex w-full gap-2">
-            <DialogClose asChild>
-              <Button type="button" onClick={onBack} className="flex-1">
-                Cancel
-              </Button>
-            </DialogClose>
+            <DialogClose
+              render={
+                <Button type="button" onClick={onBack} className="flex-1">
+                  Cancel
+                </Button>
+              }
+            ></DialogClose>
             <Button type="submit" disabled={loading} className=" flex-1">
               {loading ? (
                 <span>Đang gửi ...</span>

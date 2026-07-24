@@ -23,7 +23,7 @@ const NewGroupChatModal = () => {
   const [keyword, setKeyword] = useState("");
   const [members, setMembers] = useState<Friend[]>([]);
   const [searchFriends, setSearchFriends] = useState<Friend[]>([]);
-  const { friends, fetchFriends, searchFriend, isLoading } = useFriendStore();
+  const { friends, fetchFriends, searchFriend } = useFriendStore();
   const [isNext, setIsNext] = useState<boolean>(false);
   const { createConversation } = useChatStore();
   const [open, setOpen] = useState(false);
@@ -115,9 +115,9 @@ const NewGroupChatModal = () => {
         }
       }}
     >
-      <DialogTrigger asChild>
-        <Users2 className="cursor-pointer" size={15} />
-      </DialogTrigger>
+      <DialogTrigger
+        render={<Users2 className="cursor-pointer" size={15} />}
+      ></DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Tạo nhóm chat</DialogTitle>

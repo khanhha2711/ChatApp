@@ -115,7 +115,7 @@ export function SigninForm({
               </FieldSeparator>
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
-                  handleSignInGoogle(credentialResponse.credential);
+                  handleSignInGoogle(credentialResponse.credential || "");
                 }}
                 onError={() => {
                   console.log("Login Failed");

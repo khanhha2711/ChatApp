@@ -34,6 +34,7 @@ export const useFriendStore = create<FriendState>((set, get) => ({
   sendFriendRequest: async (to, message) => {
     try {
       set({ isLoading: true });
+      if (!message) return;
       const resultMessage = await friendService.sendFriendRequest(to, message);
       return resultMessage;
     } catch (error) {

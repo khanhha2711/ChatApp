@@ -73,12 +73,14 @@ const AddFriend = () => {
   return (
     <Dialog>
       <DialogTrigger
-        asChild
+        render={
+          <div>
+            <UserPlus size={10} className="cursor-pointer" />
+            <p>Thêm bạn mới </p>
+          </div>
+        }
         className="flex gap-2 border-gray-900 border-1 rounded-2xl px-4 py-1 w-full cursor-pointer "
-      >
-        <UserPlus size={10} className="cursor-pointer" />
-        <p>Thêm bạn mới </p>
-      </DialogTrigger>
+      ></DialogTrigger>
       <DialogContent className="sm:max-w-sm">
         <DialogHeader>
           <DialogTitle>Thêm bạn bè</DialogTitle>

@@ -47,11 +47,14 @@ const SearchForm = ({
           </span>
         )}
         <DialogFooter>
-          <DialogClose asChild className="flex-1">
-            <Button type="button" onClick={onCancel} className="w-full">
-              Cancel
-            </Button>
-          </DialogClose>
+          <DialogClose
+            render={
+              <Button type="button" onClick={onCancel} className="w-full">
+                Cancel
+              </Button>
+            }
+            className="flex-1"
+          ></DialogClose>
           <Button
             type="submit"
             disabled={loading || !email?.trim()}

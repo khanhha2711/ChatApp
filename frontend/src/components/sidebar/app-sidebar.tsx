@@ -96,7 +96,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <GroupChatList
                     conversations={conversations}
                     isLoading={isLoading}
-                    setActiveConversation={setActiveConversation}
                   />
                 </SidebarGroupContent>
               </SidebarGroup>
