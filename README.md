@@ -90,8 +90,8 @@ A modern real-time chat application built with React, Node.js, Socket.IO and Mon
 <img width="504" height="287" alt="ji-2" src="https://github.com/user-attachments/assets/c3f7d707-467f-4fee-ad2e-6dde6b5c9c9d" />
 
 - Nhắn tin
-  <img width="502" height="278" alt="ji-3" src="https://github.com/user-attachments/assets/3e30ad60-8bc7-4b3f-8e5a-a4436398dcf1" />
+<img width="502" height="278" alt="ji-3" src="https://github.com/user-attachments/assets/3e30ad60-8bc7-4b3f-8e5a-a4436398dcf1" />
   
 - Gửi yêu cầu kết bạn
-  <img width="1920" height="1080" alt="ji-6" src="https://github.com/user-attachments/assets/76e0267d-7670-45f1-aeae-f1f3cce443e0" />
+<img width="504" height="287" alt="ji-6" src="https://github.com/user-attachments/assets/76e0267d-7670-45f1-aeae-f1f3cce443e0" />
 
